@@ -6,7 +6,7 @@
 /*   By: danslav1e <danslav1e@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/25 22:42:43 by danslav1e         #+#    #+#             */
-/*   Updated: 2025/07/26 19:50:26 by danslav1e        ###   ########.fr       */
+/*   Updated: 2025/07/26 21:22:51 by danslav1e        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ public:
 	HumanB( std::string p_name);
 	
 	void attack( void );
+	void setWeapon( Weapon &p_weapon);
 
 
 private:
 
     std::string _name;
-	Weapon 		_weapon;
-
+	Weapon 		*_weapon;
 };
 
 #endif

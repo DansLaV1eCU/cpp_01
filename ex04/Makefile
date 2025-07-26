@@ -1,4 +1,4 @@
-NAME = WeaponsAndHumans
+NAME = replace
 
 CXX = c++
 
@@ -7,9 +7,6 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC_PATH := src/
 
 SRC = main.cpp \
-		HumanA.cpp \
-		HumanB.cpp \
-		Weapon.cpp
 
 SRCS  := $(SRC_PATH)$(SRC)
 
@@ -28,16 +25,16 @@ $(OBJ_PATH):
 	@mkdir -p $(OBJ_PATH)
 
 $(NAME): $(OBJS)
-	@echo "Compiling WeaponsAndHumans..."
+	@echo "Compiling replace..."
 	@$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS) $(INC_PATH)
-	@echo "WeaponsAndHumans is ready"
+	@echo "replace is ready"
 
 clean:
 	@echo "Removing .o object files..."
 	@rm -rf $(OBJ_PATH)
 
 fclean: clean
-	@echo "Removing WeaponsAndHumans..."
+	@echo "Removing replace..."
 	@rm -f $(NAME)
 
 re: fclean all

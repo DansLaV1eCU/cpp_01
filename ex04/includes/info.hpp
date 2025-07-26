@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.cpp                                         :+:      :+:    :+:   */
+/*   info.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danslav1e <danslav1e@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/26 19:15:10 by danslav1e         #+#    #+#             */
-/*   Updated: 2025/07/26 21:21:50 by danslav1e        ###   ########.fr       */
+/*   Created: 2025/07/25 22:42:43 by danslav1e         #+#    #+#             */
+/*   Updated: 2025/07/27 00:00:04 by danslav1e        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef INFO_HPP
+# define INFO_HPP
+
 #include <iostream>
-#include "HumanA.hpp"
 
-HumanA::HumanA( std::string p_name, Weapon &p_weapon) : _name(p_name), _weapon(&p_weapon) {
-}
+class info {
 
-void HumanA::attack ( void ) {
-	std::cout << this->_name << " attacks with their " << this->_weapon->getType() << std::endl;
-}
+	public:
+
+	static std::string strToReplace;
+	static std::string strToInsert;
+
+};
+
+#endif

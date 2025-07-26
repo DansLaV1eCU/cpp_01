@@ -6,7 +6,7 @@
 /*   By: danslav1e <danslav1e@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/25 22:42:43 by danslav1e         #+#    #+#             */
-/*   Updated: 2025/07/26 19:53:33 by danslav1e        ###   ########.fr       */
+/*   Updated: 2025/07/26 21:21:34 by danslav1e        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,15 @@ class HumanA {
 
 public:
 
-	HumanA( std::string p_name, Weapon *p_weapon);
-
+	HumanA( std::string p_name, Weapon &p_weapon);
+	
 	void attack( void );
 
 
 private:
 
     std::string _name;
-	Weapon 		_weapon;
+	Weapon 		*_weapon;
 
 	HumanA( void );
 };
