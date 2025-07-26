@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danslav1e <danslav1e@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/25 22:46:18 by danslav1e         #+#    #+#             */
-/*   Updated: 2025/07/26 16:41:39 by danslav1e        ###   ########.fr       */
+/*   Created: 2025/07/26 16:52:17 by danslav1e         #+#    #+#             */
+/*   Updated: 2025/07/26 17:01:08 by danslav1e        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "Zombie.hpp"
 
-Zombie::Zombie( std::string name ) : _name( name ) {   
-}
-
-Zombie::~Zombie( void ){
-	std::cout << this->_name << " is destroyed(" << std::endl;
-}	
-
-void Zombie::announce( void )
-{
-    std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+int main ( void ) {
+	Zombie *zh;
+	zh = zombieHorde(10, "Jam");
+	
+	delete [] zh;
 }

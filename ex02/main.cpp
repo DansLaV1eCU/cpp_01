@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danslav1e <danslav1e@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/25 22:46:18 by danslav1e         #+#    #+#             */
-/*   Updated: 2025/07/26 16:41:39 by danslav1e        ###   ########.fr       */
+/*   Created: 2025/07/26 17:03:38 by danslav1e         #+#    #+#             */
+/*   Updated: 2025/07/26 17:07:51 by danslav1e        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Zombie.hpp"
 
-Zombie::Zombie( std::string name ) : _name( name ) {   
-}
+int main( void ) {
+	std::string str = "HI THIS IS BRAIN";
+	std::string *stringPTR = &str;
+	std::string &stringREF = str;
 
-Zombie::~Zombie( void ){
-	std::cout << this->_name << " is destroyed(" << std::endl;
-}	
+	std::cout << &str << " | " << stringPTR << " | " << &stringREF << std::endl;
+	std::cout << str << " | " << *stringPTR << " | " << stringREF << std::endl;
 
-void Zombie::announce( void )
-{
-    std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	return 0;
 }

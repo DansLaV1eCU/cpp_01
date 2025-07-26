@@ -1,4 +1,4 @@
-NAME = zombie
+NAME = zombieHorde
 
 CXX = c++
 
@@ -7,8 +7,7 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC_PATH := src/
 
 SRC = main.cpp \
-		newZombie.cpp \
-		randomChump.cpp \
+		zombieHorde.cpp \
 		Zombie.cpp
 
 SRCS  := $(SRC_PATH)$(SRC)
@@ -28,16 +27,16 @@ $(OBJ_PATH):
 	@mkdir -p $(OBJ_PATH)
 
 $(NAME): $(OBJS)
-	@echo "Compiling zombie..."
+	@echo "Compiling zombieHorde..."
 	@$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS) $(INC_PATH)
-	@echo "zombie is ready"
+	@echo "zombieHorde is ready"
 
 clean:
 	@echo "Removing .o object files..."
 	@rm -rf $(OBJ_PATH)
 
 fclean: clean
-	@echo "Removing zombie..."
+	@echo "Removing zombieHorde..."
 	@rm -f $(NAME)
 
 re: fclean all
